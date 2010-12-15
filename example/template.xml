@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<jquery>
+
+  <before>
+    <css>
+      <file action="add">css/style.css</file>
+    </css>
+    <javascript>
+      <file>test.js</file>
+    </javascript>
+  </before>
+  
+  <content>
+    <modification selector="body">
+      <html action="append">
+        <![CDATA[
+        <h1>new content!</h1>
+        ]]>
+      </html>
+      <html action="append">
+        <![CDATA[
+        <h2>even newer content</h2>
+        <div id="divWithID">huhu</div>
+        ]]>
+      </html>
+    </modification>
+  </content>
+  
+  <after>
+    <title>parsing successful</title>
+    <modification selector="h1">
+      <class action="add">
+        huhu
+      </class>
+      <id>
+        id1
+      </id>
+      <styles action="add">
+        border: 1px solid blue;
+        width: 100px;
+        color: red;
+      </styles>
+      <animations event="click">
+      	<animation name="shake" speed="1500">
+      	  <animation name="setCSS" value='{"border": "10px solid green"}'>
+	          <animation name="slideUp" speed="1500" />      
+    	      <animation name="fadeOut" speed="1500" />
+    	  </animation>
+		</animation>
+        <!--animation name="fadeOut" speed="800" /> 
+        <animation name="moveTo" speed="500" top="+=100" left ="+=100" />
+        <animation name="fadeOut" speed="3000" selector="h2"/--> 
+      </animations>
+    </modification>
+    <modification selector="#divWithID">
+      <styles action="add">
+        border: 2px dotted red;
+        width: 100px;
+        height: 50px;
+        color: blue;
+      </styles>
+      <animations>
+        <animation name="shake" speed="500">
+          <animation name="moveTo" top="+=200" left="+=200" speed="1500" />
+          <animation name="resizeTo" width="300" height="300" speed="1500" />
+          <animation name="fadeOut" speed="1500" />
+        </animation>
+      </animations>
+      
+    </modification>
+  </after>
+  
+  <response>
+    true
+  </response>
+  
+</jquery>
