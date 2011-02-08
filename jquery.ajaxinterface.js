@@ -288,8 +288,8 @@
             
             // animation parameter
             var animationName	 	= pResponseXMLJQuery.attr("name");
-            var animationSpeed 		= (typeof pResponseXMLJQuery.attr("speed") != "undefined") ? pResponseXMLJQuery.attr("speed") : 0;
-            var animationOpacity 	= (typeof pResponseXMLJQuery.attr("opacity") != "undefined") ? pResponseXMLJQuery.attr("opacity") : 0;
+            var animationSpeed 		= parseInt((typeof pResponseXMLJQuery.attr("speed") != "undefined") ? pResponseXMLJQuery.attr("speed") : 0);
+            var animationOpacity 	= parseFloat((typeof pResponseXMLJQuery.attr("opacity") != "undefined") ? pResponseXMLJQuery.attr("opacity") : 0);
             var animationTop 		= pResponseXMLJQuery.attr("top");
             var animationBottom 	= pResponseXMLJQuery.attr("bottom");
             var animationLeft 		= pResponseXMLJQuery.attr("left");
@@ -308,7 +308,8 @@
 
             // animation type             
             switch (animationName.toLowerCase()) {
-            	case 'animation':
+            	case 'animate':
+            		console.log(animationValueObj);
                 	pCurrentJQuery.animate(animationValueObj, animationSpeed);
                 break;
 	            case 'delay':
