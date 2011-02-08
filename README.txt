@@ -2,6 +2,7 @@ jQuery.ajaxInterface V0.9
 
 "you can cause any frontend modifications without writing a single line of javascript code!"
 
+More information under: http://terehov.de#projects
 
 Idea
 
