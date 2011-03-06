@@ -1,8 +1,18 @@
-jQuery.ajaxInterface V0.9
+jQuery.ajaxInterface V0.9.1
 
 "you can cause any frontend modifications without writing a single line of javascript code!"
 
 More information under: http://terehov.de#projects
+
+SUMMARY:
+- fast dynamization of existing back-end systems
+- backend systems are good at generating HTML or XML (generation, validation, delivery)
+- 5KB
+- LGPL
+- same browser support as the current jQuery version
+
+jQuery.ajaxInterface is a XML wrapper for jQuery.
+It's a powerful tool for quickly turning an entire website into an AJAX application and at the same time putting the power of jQuery into the hands of backend developers and template editors.
 
 Idea
 
@@ -12,11 +22,6 @@ jQuery.ajaxInterface is abstracting the jQuery JavaScript code into an easy read
 You can replace any frontend content and meta information with the help of a small XML file (e.g. a template) without writing even one single line of JavaScript code!
 
 
-Summary
-
-jQuery.ajaxInterface is a XML wrapper for jQuery.
-It's a powerful tool for quickly turning an entire website into an AJAX application and at the same time putting the power of jQuery into the hands of backend developers and template editors.
-
 
 Example
 
@@ -25,7 +30,7 @@ This example adds new content to the page and changes the page title:
 <?xml version="1.0"?>
 <jquery>
 
-  <title>new page title</title>
+  <setTitle>new page title</setTitle>
   <css>
     <file action="add" src="css/style.css" />
   </css>

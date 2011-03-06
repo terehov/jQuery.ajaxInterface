@@ -1,5 +1,5 @@
 /*
- * jQuery.ajaxInterface 0.9.0
+ * jQuery.ajaxInterface 0.9.1
  *
  * Copyright 2010, Eugene Terehov
  * http://www.terehov.de
@@ -79,7 +79,7 @@
                 var eventName = thisJq.attr("event");
                 
                 switch (this.nodeName.toLowerCase()) {
-                	case 'title':
+                	case 'settitle':
                     	_modifyTitle(thisJq);
                     break;
                 	case 'setselector':
@@ -248,7 +248,7 @@
 					// add
                     else
                   		// allready added?
-                    	if ($("head link[href=" + filePath + "]").size() == 0)
+                    	if ($("head link[href='" + filePath + "']").size() == 0)
                     		$("head").append('<link rel="stylesheet" href="' + filePath + '" />');
                 break;
                 case 'script':
